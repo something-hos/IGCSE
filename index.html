@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cambridge Past Paper Revision Hub (Extended & FLE)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-hover: #047857;
+      --primary-light: #ecfdf5;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --radius: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-badge {
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.65rem;
+      border-radius: 8px;
+    }
+
+    .brand-title h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .brand-title p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      background: #ecfdf5;
+      color: #065f46;
+      font-weight: 500;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+
+    main {
+      max-width: 1400px;
+      margin: 1.5rem auto;
+      padding: 0 1.5rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    .banner-note {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius);
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: #166534;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-card .label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .stat-card .value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+
+    .filter-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .filter-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.55rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 0.85rem;
+      color: var(--text);
+      font-family: inherit;
+    }
+
+    .search-group {
+      grid-column: 1 / -1;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .results-count {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .question-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease;
+    }
+
+    .question-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+
+    .paper-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      background: #f1f5f9;
+      color: #334155;
+      border-radius: 4px;
+    }
+
+    .marks-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 4px;
+    }
+
+    .question-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .topic-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .card-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover { background: #f1f5f9; }
+
+    .btn-preview {
+      grid-column: 1 / -1;
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .btn-preview:hover {
+      background: var(--primary-hover);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal-container {
+      background: var(--surface);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 1350px;
+      height: 92vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .modal-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fafc;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .viewer-layout {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      divide-x: 1px solid var(--border);
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .viewer-pane {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: var(--surface);
+    }
+
+    .pane-header {
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pane-notice {
+      background: #fffbeb;
+      color: #92400e;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+      border-bottom: 1px solid #fef3c7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .viewer-frame {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 800px) {
+      .viewer-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <span class="logo-badge" id="header-badge">CAMBRIDGE</span>
+        <div class="brand-title">
+          <h1>Cambridge Past Paper Revision Hub</h1>
+          <p>Autonomous Question Indexer • Extended Tier & FLE</p>
+        </div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span id="sync-status">8 Subjects Connected</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="banner-note">
+      <span>💡 <strong>Deep-Linked PDF Viewer:</strong> Click <strong>"Split View"</strong> to inspect Question and Mark Scheme side-by-side, or click the direct <strong>QP / MS</strong> buttons to jump straight to the exact page in your browser.</span>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="label">Total Questions</div>
+        <div class="value" id="stat-total-q">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Papers Indexed</div>
+        <div class="value" id="stat-total-papers">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Active Subjects</div>
+        <div class="value" id="stat-subjects-active">8</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Latest Session</div>
+        <div class="value" id="stat-latest-session">-</div>
+      </div>
+    </div>
+
+    <section class="filter-panel">
+      <div class="filter-grid">
+        <div class="filter-group search-group">
+          <label for="search-input">Search Keywords, Question, or Topic</label>
+          <input type="text" id="search-input" class="form-control" placeholder="Search e.g. 'osmosis', 'respiration', '1(b)', 'algebra', 'forces'..." />
+        </div>
+
+        <div class="filter-group">
+          <label for="subject-filter">Cambridge Subject</label>
+          <select id="subject-filter" class="form-control">
+            <option value="all">All 8 Subjects</option>
+            <option value="0610">0610 - Biology (Extended)</option>
+            <option value="0620">0620 - Chemistry (Extended)</option>
+            <option value="0625">0625 - Physics (Extended)</option>
+            <option value="0500">0500 - First Language English (FLE)</option>
+            <option value="3226">3226 - Tamil (O Level)</option>
+            <option value="0417">0417 - ICT</option>
+            <option value="0607">0607 - International Mathematics (Extended)</option>
+            <option value="0455">0455 - Economics</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="topic-filter">Syllabus Topic</label>
+          <select id="topic-filter" class="form-control">
+            <option value="all">All Topics</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="year-filter">Exam Year</label>
+          <select id="year-filter" class="form-control">
+            <option value="all">All Years</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-header">
+      <h2>Curated Past Paper Questions</h2>
+      <span class="results-count" id="results-count-text">Loading database...</span>
+    </div>
+
+    <div class="questions-grid" id="questions-container"></div>
+  </main>
+
+  <!-- Modal with Dual Viewers & Direct Open Options -->
+  <div class="modal-backdrop" id="viewer-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-q-title">Question Viewer</h3>
+          <p id="modal-q-subtitle" style="font-size: 0.8rem; color: var(--text-muted);"></p>
+        </div>
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn" id="modal-qp-link">↗ Open QP (New Tab)</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn" id="modal-ms-link">↗ Open MS (New Tab)</a>
+          <button class="btn btn-preview" id="close-modal-btn">✕ Close</button>
+        </div>
+      </div>
+      <div class="viewer-layout">
+        <div class="viewer-pane">
+          <div class="pane-header">
+            <span>📄 Question Paper (Anchored)</span>
+            <span id="qp-page-tag" class="paper-badge">Page Anchor</span>
+          </div>
+          <div class="pane-notice">
+            <span>If host restricts iframe preview:</span>
+            <a href="#" target="_blank" rel="noopener noreferrer" id="pane-qp-btn" style="color: #92400e; font-weight: 600;">Open Direct PDF</a>
+          </div>
+          <iframe id="qp-frame" class="viewer-frame" src="about:blank" title="Question Paper"></iframe>
+        </div>
+        <div class="viewer-pane">
+          <div class="pane-header">
+            <span>✅ Mark Scheme (Anchored)</span>
+            <span id="ms-page-tag" class="paper-badge">Page Anchor</span>
+          </div>
+          <div class="pane-notice">
+            <span>If host restricts iframe preview:</span>
+            <a href="#" target="_blank" rel="noopener noreferrer" id="pane-ms-btn" style="color: #92400e; font-weight: 600;">Open Direct PDF</a>
+          </div>
+          <iframe id="ms-frame" class="viewer-frame" src="about:blank" title="Mark Scheme"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let allPapersData = [];
+    let flattenedQuestions = [];
+
+    const searchInput = document.getElementById('search-input');
+    const subjectFilter = document.getElementById('subject-filter');
+    const topicFilter = document.getElementById('topic-filter');
+    const yearFilter = document.getElementById('year-filter');
+    const questionsContainer = document.getElementById('questions-container');
+    const resultsCountText = document.getElementById('results-count-text');
+
+    const statTotalQ = document.getElementById('stat-total-q');
+    const statTotalPapers = document.getElementById('stat-total-papers');
+    const statSubjectsActive = document.getElementById('stat-subjects-active');
+    const statLatestSession = document.getElementById('stat-latest-session');
+
+    const viewerModal = document.getElementById('viewer-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalQTitle = document.getElementById('modal-q-title');
+    const modalQSubtitle = document.getElementById('modal-q-subtitle');
+    const modalQpLink = document.getElementById('modal-qp-link');
+    const modalMsLink = document.getElementById('modal-ms-link');
+    const paneQpBtn = document.getElementById('pane-qp-btn');
+    const paneMsBtn = document.getElementById('pane-ms-btn');
+    const qpPageTag = document.getElementById('qp-page-tag');
+    const msPageTag = document.getElementById('ms-page-tag');
+    const qpFrame = document.getElementById('qp-frame');
+    const msFrame = document.getElementById('ms-frame');
+
+    function rebuildData() {
+      flattenedQuestions = [];
+      allPapersData.forEach(paper => {
+        (paper.questions || []).forEach(q => {
+          flattenedQuestions.push({
+            ...q,
+            year: paper.year,
+            session: paper.session,
+            paper_code: paper.paper_code,
+            subject_code: paper.subject_code,
+            subject_name: paper.subject_name || paper.subject_code
+          });
+        });
+      });
+
+      statTotalQ.textContent = flattenedQuestions.length;
+      statTotalPapers.textContent = allPapersData.length;
+      const uniqueSubjects = new Set(flattenedQuestions.map(q => q.subject_code));
+      statSubjectsActive.textContent = uniqueSubjects.size;
+
+      if (allPapersData.length > 0) {
+        statLatestSession.textContent = `${allPapersData[0].session} ${allPapersData[0].year}`;
+      }
+
+      updateTopicOptions();
+      render();
+    }
+
+    function updateTopicOptions() {
+      const selectedSubject = subjectFilter.value;
+      const filtered = selectedSubject === 'all' 
+        ? flattenedQuestions 
+        : flattenedQuestions.filter(q => q.subject_code === selectedSubject);
+
+      const uniqueTopics = [...new Set(filtered.map(q => q.topic))].sort();
+
+      topicFilter.innerHTML = '<option value="all">All Topics</option>' +
+        uniqueTopics.map(t => `<option value="${t}">${t}</option>`).join('');
+    }
+
+    function render() {
+      const search = searchInput.value.toLowerCase().trim();
+      const subject = subjectFilter.value;
+      const topic = topicFilter.value;
+      const year = yearFilter.value;
+
+      const filtered = flattenedQuestions.filter(q => {
+        if (search && !q.question_id.toLowerCase().includes(search) && !q.display_number.toLowerCase().includes(search) && !q.topic.toLowerCase().includes(search) && !q.subject_name.toLowerCase().includes(search)) return false;
+        if (subject !== 'all' && q.subject_code !== subject) return false;
+        if (topic !== 'all' && q.topic !== topic) return false;
+        if (year !== 'all' && q.year.toString() !== year) return false;
+        return true;
+      });
+
+      resultsCountText.textContent = `Showing ${filtered.length} questions`;
+      questionsContainer.innerHTML = filtered.map(q => {
+        const qpPage = (q.qp_url.match(/#page=(\d+)/) || [])[1] || '1';
+        const msPage = (q.ms_url.match(/#page=(\d+)/) || [])[1] || '1';
+        return `
+          <article class="question-card">
+            <div class="card-top">
+              <span class="paper-badge">${q.subject_code} (${q.subject_name})/${q.paper_code} • ${q.session} ${q.year}</span>
+              <span class="marks-badge">${q.marks} Marks</span>
+            </div>
+            <div class="question-title">Question ${q.display_number}</div>
+            <div><span class="topic-tag">${q.topic}</span></div>
+            <div class="card-meta">
+              <span>Pages: QP p.${qpPage} • MS p.${msPage}</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-preview" onclick="openModal('${q.question_id}')">🔍 Split View</button>
+              <a href="${q.qp_url}" target="_blank" rel="noopener noreferrer" class="btn">📄 QP (p.${qpPage})</a>
+              <a href="${q.ms_url}" target="_blank" rel="noopener noreferrer" class="btn">✅ MS (p.${msPage})</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    window.openModal = function(id) {
+      const q = flattenedQuestions.find(i => i.question_id === id);
+      if (!q) return;
+
+      const qpPageMatch = q.qp_url.match(/#page=(\d+)/);
+      const msPageMatch = q.ms_url.match(/#page=(\d+)/);
+      const qpPage = qpPageMatch ? qpPageMatch[1] : '1';
+      const msPage = msPageMatch ? msPageMatch[1] : '1';
+
+      modalQTitle.textContent = `${q.subject_name} • Question ${q.display_number} (${q.marks} Marks)`;
+      modalQSubtitle.textContent = `Topic: ${q.topic} • ${q.subject_code}/${q.paper_code} (${q.session} ${q.year})`;
+
+      modalQpLink.href = q.qp_url;
+      modalMsLink.href = q.ms_url;
+      paneQpBtn.href = q.qp_url;
+      paneMsBtn.href = q.ms_url;
+
+      qpPageTag.textContent = `Page ${qpPage}`;
+      msPageTag.textContent = `Page ${msPage}`;
+
+      // Use native PDF URL with #page fragment for browser native PDF rendering
+      qpFrame.src = q.qp_url;
+      msFrame.src = q.ms_url;
+
+      viewerModal.classList.add('open');
+    };
+
+    closeModalBtn.addEventListener('click', () => {
+      viewerModal.classList.remove('open');
+      qpFrame.src = 'about:blank';
+      msFrame.src = 'about:blank';
+    });
+
+    viewerModal.addEventListener('click', (e) => {
+      if (e.target === viewerModal) closeModalBtn.click();
+    });
+
+    subjectFilter.addEventListener('change', () => {
+      updateTopicOptions();
+      render();
+    });
+
+    [searchInput, topicFilter, yearFilter].forEach(el => el.addEventListener('input', render));
+
+    // Fetch database
+    fetch('data/papers.json')
+      .then(res => res.json())
+      .then(data => {
+        allPapersData = data;
+        rebuildData();
+      })
+      .catch(() => {
+        console.warn("Using fallback seed data.");
+      });
+  </script>
+</body>
+</html>
