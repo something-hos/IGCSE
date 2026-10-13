@@ -1,0 +1,250 @@
+[
+  {
+    "subject_code": "0610",
+    "subject_name": "Biology",
+    "paper_code": "42",
+    "year": 2025,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "0610_s25_qp_42_q1a",
+        "display_number": "1(a)",
+        "topic": "7. Human nutrition",
+        "marks": 3,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Biology%20(0610)/2025/0610_s25_qp_42.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Biology%20(0610)/2025/0610_s25_ms_42.pdf#page=3"
+      },
+      {
+        "question_id": "0610_s25_qp_42_q2",
+        "display_number": "2",
+        "topic": "11. Gas exchange in humans",
+        "marks": 7,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Biology%20(0610)/2025/0610_s25_qp_42.pdf#page=5",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Biology%20(0610)/2025/0610_s25_ms_42.pdf#page=6"
+      }
+    ]
+  },
+  {
+    "subject_code": "0620",
+    "subject_name": "Chemistry",
+    "paper_code": "42",
+    "year": 2025,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "0620_s25_qp_42_q1",
+        "display_number": "1",
+        "topic": "1. States of matter & kinetic particle theory",
+        "marks": 5,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Chemistry%20(0620)/2025/0620_s25_qp_42.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Chemistry%20(0620)/2025/0620_s25_ms_42.pdf#page=3"
+      },
+      {
+        "question_id": "0620_s25_qp_42_q3a",
+        "display_number": "3(a)",
+        "topic": "6. Chemical energetics",
+        "marks": 4,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Chemistry%20(0620)/2025/0620_s25_qp_42.pdf#page=6",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Chemistry%20(0620)/2025/0620_s25_ms_42.pdf#page=6"
+      },
+      {
+        "question_id": "0620_s25_qp_42_q5",
+        "display_number": "5",
+        "topic": "11. Organic chemistry",
+        "marks": 8,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Chemistry%20(0620)/2025/0620_s25_qp_42.pdf#page=10",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Chemistry%20(0620)/2025/0620_s25_ms_42.pdf#page=9"
+      }
+    ]
+  },
+  {
+    "subject_code": "0625",
+    "subject_name": "Physics",
+    "paper_code": "42",
+    "year": 2025,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "0625_s25_qp_42_q1",
+        "display_number": "1",
+        "topic": "1. Motion, forces and energy",
+        "marks": 8,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Physics%20(0625)/2025/0625_s25_qp_42.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Physics%20(0625)/2025/0625_s25_ms_42.pdf#page=3"
+      },
+      {
+        "question_id": "0625_s25_qp_42_q3",
+        "display_number": "3",
+        "topic": "3. Waves & light reflection",
+        "marks": 6,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Physics%20(0625)/2025/0625_s25_qp_42.pdf#page=6",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Physics%20(0625)/2025/0625_s25_ms_42.pdf#page=5"
+      },
+      {
+        "question_id": "0625_s25_qp_42_q5",
+        "display_number": "5",
+        "topic": "4. Electricity and magnetism",
+        "marks": 9,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Physics%20(0625)/2025/0625_s25_qp_42.pdf#page=11",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Physics%20(0625)/2025/0625_s25_ms_42.pdf#page=9"
+      }
+    ]
+  },
+  {
+    "subject_code": "0500",
+    "subject_name": "First Language English (FLE)",
+    "paper_code": "12",
+    "year": 2025,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "0500_s25_qp_12_q1",
+        "display_number": "1",
+        "topic": "Comprehension & Summary Task",
+        "marks": 30,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/English%20-%20First%20Language%20(0500)/2025/0500_s25_qp_12.pdf#page=3",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/English%20-%20First%20Language%20(0500)/2025/0500_s25_ms_12.pdf#page=3"
+      },
+      {
+        "question_id": "0500_s25_qp_12_q2",
+        "display_number": "2",
+        "topic": "Short-answer questions and language task",
+        "marks": 25,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/English%20-%20First%20Language%20(0500)/2025/0500_s25_qp_12.pdf#page=6",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/English%20-%20First%20Language%20(0500)/2025/0500_s25_ms_12.pdf#page=7"
+      },
+      {
+        "question_id": "0500_s25_qp_12_q3",
+        "display_number": "3",
+        "topic": "Extended response to reading",
+        "marks": 25,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/English%20-%20First%20Language%20(0500)/2025/0500_s25_qp_12.pdf#page=8",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/English%20-%20First%20Language%20(0500)/2025/0500_s25_ms_12.pdf#page=11"
+      }
+    ]
+  },
+  {
+    "subject_code": "3226",
+    "subject_name": "Tamil (O Level)",
+    "paper_code": "01",
+    "year": 2024,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "3226_s24_qp_01_q1",
+        "display_number": "1",
+        "topic": "Composition (\u0b95\u0b9f\u0bcd\u0b9f\u0bc1\u0bb0\u0bc8)",
+        "marks": 60,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20O%20Level/Tamil%20(3226)/2024/3226_s24_qp_01.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20O%20Level/Tamil%20(3226)/2024/3226_s24_ms_01.pdf#page=2"
+      },
+      {
+        "question_id": "3226_s24_qp_02_q1",
+        "display_number": "2",
+        "topic": "Translation & Reading Comprehension",
+        "marks": 50,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20O%20Level/Tamil%20(3226)/2024/3226_s24_qp_02.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20O%20Level/Tamil%20(3226)/2024/3226_s24_ms_02.pdf#page=2"
+      }
+    ]
+  },
+  {
+    "subject_code": "0417",
+    "subject_name": "ICT",
+    "paper_code": "12",
+    "year": 2025,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "0417_s25_qp_12_q1",
+        "display_number": "1",
+        "topic": "1. Types and components of computer systems",
+        "marks": 6,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Information%20and%20Communication%20Technology%20(0417)/2025/0417_s25_qp_12.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Information%20and%20Communication%20Technology%20(0417)/2025/0417_s25_ms_12.pdf#page=3"
+      },
+      {
+        "question_id": "0417_s25_qp_12_q4",
+        "display_number": "4",
+        "topic": "4. Networks and the effects of using them",
+        "marks": 8,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Information%20and%20Communication%20Technology%20(0417)/2025/0417_s25_qp_12.pdf#page=5",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Information%20and%20Communication%20Technology%20(0417)/2025/0417_s25_ms_12.pdf#page=5"
+      },
+      {
+        "question_id": "0417_s25_qp_12_q7",
+        "display_number": "7",
+        "topic": "8. Safety and security in ICT",
+        "marks": 7,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Information%20and%20Communication%20Technology%20(0417)/2025/0417_s25_qp_12.pdf#page=9",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Information%20and%20Communication%20Technology%20(0417)/2025/0417_s25_ms_12.pdf#page=8"
+      }
+    ]
+  },
+  {
+    "subject_code": "0607",
+    "subject_name": "International Mathematics",
+    "paper_code": "42",
+    "year": 2025,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "0607_s25_qp_42_q1",
+        "display_number": "1",
+        "topic": "1. Number & Arithmetic",
+        "marks": 7,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Cambridge%20International%20Mathematics%20(0607)/2025/0607_s25_qp_42.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Cambridge%20International%20Mathematics%20(0607)/2025/0607_s25_ms_42.pdf#page=3"
+      },
+      {
+        "question_id": "0607_s25_qp_42_q3",
+        "display_number": "3",
+        "topic": "2. Algebra and graphs",
+        "marks": 11,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Cambridge%20International%20Mathematics%20(0607)/2025/0607_s25_qp_42.pdf#page=5",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Cambridge%20International%20Mathematics%20(0607)/2025/0607_s25_ms_42.pdf#page=5"
+      },
+      {
+        "question_id": "0607_s25_qp_42_q7",
+        "display_number": "7",
+        "topic": "5. Coordinate geometry & Vectors",
+        "marks": 9,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Cambridge%20International%20Mathematics%20(0607)/2025/0607_s25_qp_42.pdf#page=11",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Cambridge%20International%20Mathematics%20(0607)/2025/0607_s25_ms_42.pdf#page=9"
+      }
+    ]
+  },
+  {
+    "subject_code": "0455",
+    "subject_name": "Economics",
+    "paper_code": "22",
+    "year": 2025,
+    "session": "May/June",
+    "questions": [
+      {
+        "question_id": "0455_s25_qp_22_q1a",
+        "display_number": "1(a)",
+        "topic": "1. The basic economic problem",
+        "marks": 2,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Economics%20(0455)/2025/0455_s25_qp_22.pdf#page=2",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Economics%20(0455)/2025/0455_s25_ms_22.pdf#page=2"
+      },
+      {
+        "question_id": "0455_s25_qp_22_q2",
+        "display_number": "2",
+        "topic": "2. The allocation of resources (Supply & Demand)",
+        "marks": 8,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Economics%20(0455)/2025/0455_s25_qp_22.pdf#page=4",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Economics%20(0455)/2025/0455_s25_ms_22.pdf#page=4"
+      },
+      {
+        "question_id": "0455_s25_qp_22_q4",
+        "display_number": "4",
+        "topic": "4. Government and the macroeconomy",
+        "marks": 10,
+        "qp_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Economics%20(0455)/2025/0455_s25_qp_22.pdf#page=7",
+        "ms_url": "https://papers.gceguide.net/Cambridge%20IGCSE/Economics%20(0455)/2025/0455_s25_ms_22.pdf#page=7"
+      }
+    ]
+  }
+]
